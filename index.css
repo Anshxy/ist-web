@@ -1,0 +1,211 @@
+html{
+  scroll-behavior: smooth; 
+  overflow: hidden;
+  height: 100%;
+}
+
+body{
+  font-family: "Ubuntu";
+  color: black;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  
+}
+
+
+
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 30vw 0 5vw;
+  position: relative;
+  transform-style: inherit;
+}
+
+@keyframes revealing_hor {
+  from { width:0 }
+  to {width: 100%}
+  
+}
+
+@keyframes revealing_ver {
+  from { opacity:0 }
+  to {opacity: 100%}
+  
+}
+
+header .tm {
+  font-size: 15px;
+}
+
+header .typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  animation: revealing_hor 7s forwards;
+}
+
+header .arrow-down {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  animation: revealing_ver 7s forwards;
+}
+
+
+
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 35px;
+  animation: revealing_ver 4s forwards;
+}
+
+header, header:before {
+  background: 50% 50% / cover;
+  
+}
+
+header::before {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  content: "";
+  position: absolute;
+  display: block;
+  background: black;
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+header * {
+  font-weight: normal;
+  letter-spacing: 0.3em;
+  text-align: center;
+  color: white;
+}
+
+
+
+.main-contain {
+  font-family: "Ubuntu";
+  margin-top: 500px;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  padding-top: 50px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+h1.anim{
+      text-align: center;
+      margin-bottom: 60px;
+}
+ 
+p {
+      font-size: 16px;
+      font-weight: 300;
+}
+
+p.anim{
+      width: 60%;
+      margin-bottom: 60px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+}
+
+ 
+@media only screen and (max-width: 991px) {
+  
+  header img{
+    width: 30%;
+  }
+  
+  header p {
+            
+            width: 90%;
+            margin: auto;
+      }
+ 
+      .work img {
+            margin: 2%;
+            width: 90%;
+      }
+ 
+      .header2 {
+            margin: 130px 0 40px 12px;
+      }
+ 
+      .header2 h1 {
+            font-size: 36px;
+      }
+ 
+      .header2 p {
+            width: 90%;
+      }
+ 
+      .work2 img {
+            margin: 2%;
+      }
+  
+}
+
+
+ul {
+  list-style-type: none;
+  margin-bottom: 60px;
+  opacity: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  position: fixed;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.main-contain .upcoming-events-container {
+  background-color: black;
+  margin-top: 500px;
+  color: white;
+}
